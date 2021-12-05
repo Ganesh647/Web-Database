@@ -1,4 +1,7 @@
-const url = "/api/profiles/"
+const url = "api/profiles/";
+
+
+
 import axios from "axios";
 
 class PostService {
