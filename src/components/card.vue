@@ -1,18 +1,22 @@
 <template>
+  <div>
+
   <div class="card" >
     <div class="details" >
       <div class="user_photo horizontal_center" id="user_photo">
-        <img src="https://randomuser.me/api/portraits/women/95.jpg">
+        <img src="https://randomuser.me/api/portraits/men/75.jpg">
       </div>
       <div class="content">
-        <p id="user_value" style="text-transform: capitalize;">{{ msg }}</p>
-        <p id="Created">Created at {{`${date.getDate()}/${date.getMonth()}`}}</p>
+        <p id="user_value" style="text-transform: capitalize;">{{ `${msg+" "}${sname}` }}</p>
+        <p id="user_value3" style="text-transform: capitalize;">{{ number }}</p>
+        <p id="user_value4" style="text-transform: capitalize;">{{ sub }}</p>
+        <p id="Created">Created at {{`${date.getHours() +":"}${date.getMinutes()+"  "}${date.getDate()}/${date.getMonth()}`}}</p>
       </div>
     </div>
     <button @click="onDelete()" class="delete">Delete</button>
   </div>
+  </div>
 </template>
-
 
 <script>
 export default {
@@ -20,7 +24,11 @@ export default {
   props: {
     msg: String,
     date:Date,
-    id:String
+    id:String,
+    sname:String,
+    number:String,
+    sub:String
+
   },
   methods:{
     onDelete(){
