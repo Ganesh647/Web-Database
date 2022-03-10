@@ -12,6 +12,10 @@ npm run serve
 
 ### Compiles and minifies for production
 ```
+
+
+
+npm run  not only build
 npm run build
 ```
 
